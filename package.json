@@ -1,0 +1,25 @@
+{
+  "name": "sfc-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "LEESUNGMIN",
+  "license": "MIT",
+  "dependencies": {
+    "cross-env": "^5.2.0",
+    "dotenv": "^8.0.0",
+    "koa": "^2.7.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-router": "^7.4.0",
+    "mybatis-mapper": "^0.6.3",
+    "pg": "^7.11.0",
+    "winston": "^3.2.1",
+    "winston-daily-rotate-file": "^3.9.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  },
+  "scripts": {
+    "start": "cross-env NODE_PATH=src node src",
+    "start:dev": "cross-env NODE_PATH=src nodemon --watch src/ src/index.js"
+  }
+}

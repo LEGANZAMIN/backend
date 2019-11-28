@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="sm_test">  
+  <select id="selectSampleList">
+    SELECT user_id
+         , user_nm
+         , age
+      FROM sm_test
+     <if test="user_nm != null and user_nm !=''">
+     WHERE user_nm = #{user_nm}
+     </if>
+  </select>
+
+  <select id="selectSample">
+    SELECT user_id
+         , user_nm
+         , age
+      FROM sm_test
+     WHERE user_id = #{user_id}
+  </select>
+
+  <insert id="insertSample">
+    INSERT INTO sm_test
+    (
+        user_id
+      , user_nm
+      , age      
+    )
+    VALUES
+    (
+        #{user_id}
+      , #{user_nm}
+      , ${age}
+    )
+  </insert>
+
+</mapper>
