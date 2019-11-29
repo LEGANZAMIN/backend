@@ -1,0 +1,5 @@
+node_modules.zip
+log/
+node_modules/
+src/resources/config/
+yarn-error.log
